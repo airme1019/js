@@ -10,7 +10,7 @@ function test(){
 var ii= test();
 ii();
  
-/*self invoke function */
+/*self invoke function  --- IIFE */
  var i = (function () {
     var counter = 0;
    
