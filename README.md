@@ -20,3 +20,5 @@ Following are looping structures in Javascript:
  4. What is the function of delete operator?
 
 The functionality of delete operator is used to delete all variables and objects in a program but it cannot delete variables declared with VAR keyword.
+
+5. promise vs callback
