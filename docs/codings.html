@@ -3,7 +3,7 @@
 <pre><code>
   function flat(arr,flatted){
   if(!flatted){var flatted =[];}
-  for(var i = 0; i<arr.length; i++){   
+  for(var i = 0; i< arr.length; i++){   
     if(Array.isArray(arr[i]) ){     
        flat(arr[i],flatted);     
     }else{      
