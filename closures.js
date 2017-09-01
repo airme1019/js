@@ -1,4 +1,4 @@
-
+/*test*/
 function test(){
   var a = 6;
  return function b(){
