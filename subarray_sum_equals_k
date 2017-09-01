@@ -1,0 +1,24 @@
+/*Given an array of integers and an integer k, you need to find the total number of continuous subarrays whose sum equals to k.
+Input:nums = [1,1,1], k = 2
+Output: 2
+*/
+var subarraySum = function(nums, k) {
+    var counter = 0;
+    var nums_len = nums.length;
+    for(var i=0;i<nums_len;i++){
+    var j = i+1;
+    sum = nums[i];
+      if(nums[i] == k){
+         counter++;         
+         }
+    while(j<nums_len){
+        sum += nums[j];
+        if(sum === k){
+            counter++;           
+        }
+        j++;
+      //console.log(' ' + sum +" "+ counter);
+    }
+  }
+    return counter;
+};
