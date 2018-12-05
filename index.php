@@ -50,11 +50,11 @@ $js_files = dirToArray($dir);
     <li><a href="addDigits.js">Add Digits (Hash)</a></li>
     <li><a href="sumOfTwo.js">Sum of Two (while modulus)</a></li>
     <li><a href="reverseString.js">Reverse String (recursive)</a></li>
-    <li><a href="flatten_array.js">Flatten Array</a></li>
+    <li><a href="isParantheseValid.js">Flatten Array</a></li>
   </ul>
 </div>
 <script src="main.js"></script>
-<script src="addDigits.js"></script>
+<script src="isParantheseValid.js"></script>
 
 <!--<script src="sumOfTwo.js"></script>
 <script src="addDigits.js"></script>

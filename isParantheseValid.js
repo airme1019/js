@@ -1,23 +1,19 @@
-var isValid = function(s){
-    var s_arr = s.split('');
-    var ori_l = s_arr.length;
+var isValid = function(str){
+    var sArr = str.split('');
     var close = [];
-    for(var i =0; i<ori_l; i++){
-      if(s_arr[i] == '{'){
-          close.push('}');         
-         }else if(s_arr[i] == '['){
+    for(var i =0; i<sArr.length; i++){
+      if(sArr[i] == '{'){
+          close.push('}');
+         }else if(sArr[i] == '['){
            close.push(']');
-         }else if(s_arr[i] == '('){
+         }else if(sArr[i] == '('){
            close.push(')');
          }else{
-           if(s_arr[i] !== close.pop()){
+           if(sArr[i] !== close.pop()){
              return false;
            }
          }
     }
-      if(close.length >0){
-        return false;             
-    }else{ return true;}  
-  
+    return close.length >0 ? false : true
 };
-console.log(isValid('{[())]}'));
+console.log(isValid('{[()()]}'));
