@@ -2,7 +2,7 @@
 function test(){
   var a = 6;
  return function b(){
-    console.log(a);
+    // console.log(a);
   }
 
 }
@@ -20,7 +20,7 @@ ii();
 
 
 })();
-console.log(i());
+// console.log(i());
 
 var add = (function () {
     var counter = 0;
@@ -30,4 +30,4 @@ var add = (function () {
 
 add();
 add();
-console.log(add());
+// console.log(add());

@@ -11,4 +11,4 @@ var maxDistance = function(arrays) {
      }  
    return maxD;
 }
-console.log(maxDistance(a));  
+// console.log(maxDistance(a));  

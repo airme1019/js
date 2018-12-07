@@ -20,10 +20,10 @@ function flat(arr,flatted){
 return flatted;
 }
 var test = [1, [2], [3,4], [[5, [6]]], 7];
-//console.log(flat(test));
+// console.log(flat(test));
 
 function flatten(arr){
   return arr.reduce((acc, cur) => Array.isArray(cur) ? acc.concat(flatten(cur)) : acc.concat(cur), []);
 }
-console.log(flatten(test));
+// console.log(flatten(test));
 /*hi*/

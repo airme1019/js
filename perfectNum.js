@@ -15,11 +15,11 @@ var temp = 0;
      
      if(temp === number && temp !== 0)  
         {  
-       console.log("It is a perfect number.");  
+       // console.log("It is a perfect number.");  
         }   
      else  
         {  
-       console.log("It is not a perfect number.");  
+       // console.log("It is not a perfect number.");  
         }     
  }   
 is_perfect(28);   

@@ -17,7 +17,7 @@ var subarraySum = function(nums, k) {
             counter++;           
         }
         j++;
-      //console.log(' ' + sum +" "+ counter);
+      //// console.log(' ' + sum +" "+ counter);
     }
   }
     return counter;

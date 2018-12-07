@@ -10,8 +10,8 @@ var addDigits = function(num){
 var addDigits2 = function(num){
   while(num > 10) {
     num = parseInt(num/10) + num%10;
-    console.log(num);
+    // console.log(num);
   }
   return num;
 }
-console.log(addDigits2(4321));
+// console.log(addDigits2(4321));

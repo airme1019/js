@@ -11,4 +11,4 @@ var smallestFactorization = function(a) {
   if(a>9){return 0;}
     return parseInt(f_arr.sort().join('')) > Math.pow(2,31) ? 0 : parseInt(f_arr.sort().join(''));
  };
- console.log(smallestFactorization(387420489));     
+ // console.log(smallestFactorization(387420489));     

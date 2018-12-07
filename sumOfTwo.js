@@ -21,15 +21,15 @@ var res = function(nums, target){
   for( var i = 0; i< nums.length; i++){
     let num = nums[i];
     if(hash[num] != undefined){
-      console.log('hash is there ' + hash[num]);
+      // console.log('hash is there ' + hash[num]);
       resArr.push([i, hash[num]]);
     } else{
-      console.log('no hash ');
+      // console.log('no hash ');
       hash[target-num] = i;
-      console.log(hash[target-num]);
+      // console.log(hash[target-num]);
     }
   }
   return resArr;
 }
 res(nums,target);
-console.log(res(nums,target));
+// console.log(res(nums,target));

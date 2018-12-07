@@ -6,9 +6,9 @@ var arrays = [
 
 
 var result = arrays.shift().filter(function(v) {
-  console.log("v " + v);
+  // console.log("v " + v);
     return arrays.every(function(a) {
-      console.log("a " + a);
+      // console.log("a " + a);
         return a.indexOf(v) !== -1;
     });
 });

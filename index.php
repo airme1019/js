@@ -41,7 +41,7 @@ $js_files = dirToArray($dir);
   <a href="#" id="size-14">14</a>
   <a href="#" id="size-16">16</a>
 </div>
-
+<div><a href="questions.html" target="_blank">Some JS Questions</a></div>
 <div>
   <ul>
     <?php foreach ($js_files as $key => $value) {
@@ -53,11 +53,10 @@ $js_files = dirToArray($dir);
     <li><a href="isParantheseValid.js">Flatten Array</a></li>
   </ul>
 </div>
-<script src="main.js"></script>
-<script src="isParantheseValid.js"></script>
 
-<!--<script src="sumOfTwo.js"></script>
-<script src="addDigits.js"></script>
-<script src="reverseString.js"></script>-->
+
+<?php foreach ($js_files as $key => $value) {
+  echo "<script src=\"$value\"></script>";
+}?>
 </body>
 </html>

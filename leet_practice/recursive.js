@@ -4,4 +4,4 @@ function frac(n){
    
  }
 
-console.log(frac(3));
+// console.log(frac(3));

@@ -5,21 +5,21 @@ var v;
 var test =  new Object();
 test.p1 = '1';
 test.p2 = '2';
-//console.log(Object.getOwnPropertyNames(test));
+//// console.log(Object.getOwnPropertyNames(test));
 
 
 var isStrict = (function() { return !this; })();
-//console.log(isStrict)
+//// console.log(isStrict)
 
 var arr1 = [1,2,3]
 for (let i in arr1) {
-  //console.log(i)
+  //// console.log(i)
 }
 
 var lamdaFunc = (...params) => {
-  console.log(params.length)
+  // console.log(params.length)
   for ( let i of params){
-    console.log(i)
+    // console.log(i)
   }
 }
 lamdaFunc(3,2,1,5)
@@ -31,42 +31,42 @@ function* ask() {
    return `${name}'s favorite sport is ${sport}`;
 }
 const it = ask();
-/* console.log(it.next());
-console.log(it.next('Ethan'));
-console.log(it.next('Cricket'));
+/* // console.log(it.next());
+// console.log(it.next('Ethan'));
+// console.log(it.next('Cricket'));
 */
 // object assign
 var det = { name:"Tom", ID:"E1001" };
 var copy = Object.assign({}, det);
-console.log(copy);
+// console.log(copy);
 for (let val in copy) {
-  // console.log(copy[val])
+  // // console.log(copy[val])
 }
 
 var o1 = { a: 10 };
 var o2 = { b: 20 };
 var o3 = { c: 30 };
 var obj = Object.assign(o1, o2, o3);
-//console.log(obj);
-//console.log(o1);
+//// console.log(obj);
+//// console.log(o1);
 
 var emp = { name: 'John', Id: 3 }
 var {name, Id} = emp
-//console.log(name)
-//console.log(Id)
+//// console.log(name)
+//// console.log(Id)
 
 var array = [2];
 var p = array.push(3);
-//console.log(`p is ${p}`)
+//// console.log(`p is ${p}`)
 
 var array2 = [3,6,12,9,15]
 var bigger6 = array2.filter( i => i>6)
-//console.log(bigger6)
+//// console.log(bigger6)
 
 var myMap = new Map();
 myMap.set("id", "admin");
 myMap.set("pass", "admin@123");
-myMap.forEach((val, index )=> console.log(`${index} ${val}`));
+myMap.forEach((val, index )=> // console.log(`${index} ${val}`));
 
 
 function Person(first, last, age, gender, interests) {
@@ -91,7 +91,7 @@ Object.defineProperty(Teacher.prototype, 'constructor', {
     value: Teacher,
     enumerable: false, // so that it does not appear in 'for in' loop
     writable: true });
-console.log(Teacher.prototype.constructor)
+// console.log(Teacher.prototype.constructor)
 
 
 
@@ -104,22 +104,22 @@ request.send();
 
 
 request.onload = function(){
-  /*console.log(request.response);
+  /*// console.log(request.response);
 
   var p1 = document.createElement('p');
   p1.textContent = JSON.stringify(request.response);
   p1.style.zIndex = 2;
-  console.log(main)
+  // console.log(main)
   main.appendChild(p1);*/
 }
 
 fetch(url)
 .then(function (response){
-  //console.log( response.json());
+  //// console.log( response.json());
   return response.json();
 })
 .then(function(data){
-  //console.log(data)
+  //// console.log(data)
   var heroKeys = Object.keys(data);
   for( let entry of heroKeys) {
     let hero = document.createElement('p')
@@ -141,4 +141,4 @@ document.getElementById('size-16').onclick = makeSizer(16);
 var arr2 = [1, 2, [3, 4, [5, 6]]];
 var r = arr2.flat(2);
 arr2.shift();
-//console.log(arr2)
+//// console.log(arr2)

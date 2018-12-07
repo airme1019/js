@@ -21,4 +21,4 @@ function Second_Greatest_Lowest(arr_num)
   
 }
 
-console.log(Second_Greatest_Lowest([1,2,2,1,3,4,5]));
+// console.log(Second_Greatest_Lowest([1,2,2,1,3,4,5]));

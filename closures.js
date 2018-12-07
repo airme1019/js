@@ -1,27 +1,27 @@
 /*test*/
-function test(){
-  var a = 6;
+function test(a){
+  var a = 6;;
  return function b(){
-    console.log(a);  
+  // console.log(a);
   }
-  
+
 }
 
 var ii= test();
 ii();
- 
+
 /*self invoke function  --- IIFE */
  var i = (function () {
     var counter = 0;
-   
+
       return function () {
         return counter += 1;}
- 
-  
-    
+
+
+
 })();
-console.log(i());
- 
+// console.log(i());
+
 var add = (function () {
     var counter = 0;
     return function () {
@@ -30,4 +30,4 @@ var add = (function () {
 
 add();
 add();
-console.log(add());
+// console.log(add());

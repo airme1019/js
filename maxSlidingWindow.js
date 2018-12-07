@@ -14,4 +14,4 @@ var maxSlidingWindow = function(nums, k) {
     return max;
 };
 var nums = [1,3,-1,-3,5,3,6,7];
-console.log(maxSlidingWindow(nums,3));
+// console.log(maxSlidingWindow(nums,3));

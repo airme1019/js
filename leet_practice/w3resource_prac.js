@@ -20,7 +20,7 @@ function rangeBetween(a,b){
     
     return r;
 }
-//console.log(rangeBetween(10,0));
+//// console.log(rangeBetween(10,0));
 
 function filter_arr(val){
     if(val){ return val;}
@@ -28,7 +28,7 @@ function filter_arr(val){
 }
 
 var res = ["1","0","2",null, '', true,false].filter(filter_arr);
-//console.log(res);
+//// console.log(res);
 /*38. Write a JavaScript function to move an array element from one
 position to another.*/
 function move(arr,a,b){
@@ -36,9 +36,9 @@ function move(arr,a,b){
     var temp = arr[a];
     arr[a]= arr[b];
     arr[b] = temp;
-    console.log( arr);
+    // console.log( arr);
        }
-    else{console.log("out!");}
+    else{// console.log("out!");}
 }
 //move([1,2,3,4,5],1,4);
 
@@ -51,12 +51,12 @@ function arr_fill(a,b){
     return arr;
     
 }
-//console.log(arr_fill(5,"AB"));
+//// console.log(arr_fill(5,"AB"));
 
 /*35. Write a JavaScript function to get a random item from an array.*/
 function random_arr(arr){
     var r = Math.floor(Math.random()*(arr.length));
-    console.log(arr[r]);
+    // console.log(arr[r]);
     
     
 }
@@ -67,7 +67,7 @@ largest element from an unsorted array.*/
 function nthlargest(arr,nth){
     arr = arr.sort().reverse();
     if(nth<= arr.length-1){
-    console.log(arr[nth]);
+    // console.log(arr[nth]);
 
        }
     
@@ -80,9 +80,9 @@ function remove_item(arr,item){
     var item_index = arr.indexOf(item);
     if(item_index !== -1){
         arr.splice(item_index,1);
-        console.log(arr);
+        // console.log(arr);
     }else{
-        console.log("Item not here");
+        // console.log("Item not here");
     }
     
 }
@@ -113,14 +113,14 @@ var array1 = [1, 2, 3];
 
 var array2 = [2, 30, 1];
 
-//console.log(merge_array(array1, array2));
+//// console.log(merge_array(array1, array2));
 
 /*28. Write a JavaScript function to find the longest common 
 starting substring in a set of strings.*/
 function longest_common_starting_substring(arr) {
    var i = 0;
    while (i < arr[0].length && arr[0].charAt(i) === arr[1].charAt(i)) i++; 
-   console.log(arr[0].substring(0, i));
+   // console.log(arr[0].substring(0, i));
 }
 //longest_common_starting_substring(["hello", "helloaaaa"]);
 
@@ -137,7 +137,7 @@ function findPair(arr,num){
         }
         
     }
-    console.log(pair);
+    // console.log(pair);
     
 }
 //findPair([11,9,20,1,0,3,17],20);
@@ -155,7 +155,7 @@ function compare_to_sort(x,y)
   return x.title - y.title;
  }
 
-//console.log(library.sort(compare_to_sort));
+//// console.log(library.sort(compare_to_sort));
 
 /*23. Write a JavaScript function to find the difference of two arrays.*/
 function differenceOf2Arrays (array1, array2) {
@@ -174,7 +174,7 @@ return temp.sort((a,b) => a-b);
 
 function flattenArr(arr){
     
-    console.log(arr.toString().split(',').map(Number));
+    // console.log(arr.toString().split(',').map(Number));
 }
 flattenArr([3,[2,6],5,[2,[7,8]]]);
 
@@ -200,6 +200,6 @@ function binary_Search(items, value){
  return (items[middleIndex] != value) ? -1 : middleIndex;
 }
 var items = [1, 2, 3, 4, 5, 7, 8, 9];
-console.log(binary_Search(items, 1));   
-console.log(binary_Search(items, 5));
+// console.log(binary_Search(items, 1));   
+// console.log(binary_Search(items, 5));
   

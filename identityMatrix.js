@@ -6,4 +6,4 @@ function identityMatrix(size){
   }
   return r;
 }
-console.log(identityMatrix(3));
+// console.log(identityMatrix(3));

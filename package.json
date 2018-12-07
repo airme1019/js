@@ -1,0 +1,33 @@
+{
+  "name": "lz_js",
+  "version": "1.0.0",
+  "description": "JS ",
+  "main": "index.php",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "flow-bin": "^0.87.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-flow": "^6.23.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "babel",
+    "test": "test",
+    "flow": "flow"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/airme1019/js.git"
+  },
+  "keywords": [
+    "JS"
+  ],
+  "author": "LingZ",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/airme1019/js/issues"
+  },
+  "homepage": "https://github.com/airme1019/js#readme"
+}

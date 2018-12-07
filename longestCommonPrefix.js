@@ -2,7 +2,7 @@ var longestCommonPrefix = function(strs) {
     if(strs.length==0) return '';
    // var sorted_strs = strs.sort(function(a,b){ return a.length -b.length});
   var sorted_strs = strs.sort();
-  console.log(sorted_strs);
+  // console.log(sorted_strs);
     var shortest = sorted_strs[0].split('');
     var longest = sorted_strs[sorted_strs.length -1].split('');  
     var pre ='';
@@ -15,5 +15,5 @@ var longestCommonPrefix = function(strs) {
   return pre;  
 };
 
-console.log(longestCommonPrefix(["aaaaaaaaaaa","aaaaaaaab","aaaaaaaaa"]) );     
-console.log(longestCommonPrefix(["aba","abc","ababa"]) );   
+// console.log(longestCommonPrefix(["aaaaaaaaaaa","aaaaaaaab","aaaaaaaaa"]) );     
+// console.log(longestCommonPrefix(["aba","abc","ababa"]) );   
