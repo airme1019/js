@@ -26,4 +26,3 @@ function flatten(arr){
   return arr.reduce((acc, cur) => Array.isArray(cur) ? acc.concat(flatten(cur)) : acc.concat(cur), []);
 }
 // console.log(flatten(test));
-/*hi*/
