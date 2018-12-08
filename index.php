@@ -7,7 +7,7 @@
 </head>
 <body>
 <?php
-$dir = getcwd();
+$dir = 'src';
 function dirToArray($dir) {
  $result = array();
  $cdir = scandir($dir);
@@ -45,7 +45,7 @@ $js_files = dirToArray($dir);
 <div>
   <ul>
     <?php foreach ($js_files as $key => $value) {
-      echo "<li><a href=\"$value\" target=\"_blank\">$value</a></li>";
+      echo "<li><a href=\"src/$value\" target=\"_blank\">$value</a></li>";
     }?>
     <li><a href="addDigits.js">Add Digits (Hash)</a></li>
     <li><a href="sumOfTwo.js">Sum of Two (while modulus)</a></li>
@@ -56,7 +56,8 @@ $js_files = dirToArray($dir);
 
 
 <?php foreach ($js_files as $key => $value) {
-  echo "<script src=\"$value\"></script>";
+  echo "<script src=\"src/$value\"></script>";
 }?>
+
 </body>
 </html>

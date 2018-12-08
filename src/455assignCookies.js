@@ -12,7 +12,7 @@ s: cookie size
 
  */
 
- var assignCookies = function(g: Array<number>,s) {
+ var assignCookies = function(g,s) {
    g.sort();
    s.sort();
    for(var i = 0; i<g.length && i<s.length; i++){
@@ -20,6 +20,7 @@ s: cookie size
    }
    return i;
  }
+ 
  var g = [1,2,3];
  var s = [1,3];
 var a = assignCookies(g,s);
