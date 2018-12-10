@@ -47,10 +47,7 @@ $js_files = dirToArray($dir);
     <?php foreach ($js_files as $key => $value) {
       echo "<li><a href=\"src/$value\" target=\"_blank\">$value</a></li>";
     }?>
-    <li><a href="addDigits.js">Add Digits (Hash)</a></li>
-    <li><a href="sumOfTwo.js">Sum of Two (while modulus)</a></li>
-    <li><a href="reverseString.js">Reverse String (recursive)</a></li>
-    <li><a href="isParantheseValid.js">Flatten Array</a></li>
+
   </ul>
 </div>
 
@@ -58,6 +55,6 @@ $js_files = dirToArray($dir);
 <?php foreach ($js_files as $key => $value) {
   echo "<script src=\"src/$value\"></script>";
 }?>
-
+<!--<script src="build/main.bundle.js"></script>-->
 </body>
 </html>

@@ -10,7 +10,7 @@
     "test": "test",
     "build": "babel src/ -d build/",
     "flow": "flow",
-    "babel": "babel --presets es2015 src -o build/main.bundle.js"
+    "babel": "babel --presets es2015 src/finishCourse.js -o build/main.bundle.js"
   },
   "repository": {
     "type": "git",

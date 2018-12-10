@@ -38,7 +38,9 @@ function move(arr,a,b){
     arr[b] = temp;
     // console.log( arr);
        }
-    else{// console.log("out!");}
+    else{
+      // console.log("out!");
+    }
 }
 //move([1,2,3,4,5],1,4);
 
@@ -171,14 +173,9 @@ if(array1.indexOf(array2[i]) === -1) temp.push(array2[i]);
 }
 return temp.sort((a,b) => a-b);
 }
+var items = [1, 2, 3, 4, 5, 7, 8, 9];
 
-function flattenArr(arr){
-
-    // console.log(arr.toString().split(',').map(Number));
-}
-flattenArr([3,[2,6],5,[2,[7,8]]]);
-
-
+/*
 function binary_Search(items, value){
     var firstIndex  = 0,
         lastIndex   = items.length - 1,
@@ -198,7 +195,4 @@ function binary_Search(items, value){
     }
 
  return (items[middleIndex] != value) ? -1 : middleIndex;
-}
-var items = [1, 2, 3, 4, 5, 7, 8, 9];
-// console.log(binary_Search(items, 1));
-// console.log(binary_Search(items, 5));
+}*/

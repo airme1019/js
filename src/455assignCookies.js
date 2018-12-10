@@ -15,16 +15,26 @@ s: cookie size
  var assignCookies = function(g,s) {
    g.sort();
    s.sort();
-   for(var i = 0; i<g.length && i<s.length; i++){
-     if(g[i]<s[i]) i++;
+   var j = 0;
+   for(var i = 0; i<s.length&&i<g.length; i++){
+     if(g[i]<=s[i]){  j++;
+       console.log("j: "+ j);} else { break;}
    }
    return i;
  }
- 
+ var assignCookies2 = function(g, s) {
+     g.sort(function(a, b) { return a - b})
+     s.sort(function (a, b) { return a - b })
+     var j = 0;
+
+     s.forEach((element) => {
+         if (element >= g[j]) {
+             j++
+         }
+     })
+     return j
+ };
  var g = [1,2,3];
- var s = [1,3];
+ var s = [1,3,3];
 var a = assignCookies(g,s);
-console.log(a)
-const b = [1,2,3]
-b.push(2);
-console.log(b)
+ console.log(a);

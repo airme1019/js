@@ -14,24 +14,23 @@ v    v
 There are two paths: 0 -> 1 -> 3 and 0 -> 2 -> 3.
 */
 
-var allPathsSourceTarget = module.exports = function(graph) {
-    var res = [];
-    var path = [];
-
-    path.push(0);
-
-    dfsSearch(0);
-
-    function dfsSearch(node) {
-
-        if (node == graph.length - 1) {
-            res.push(path.slice(0));
-        } else
-            for (nextNode of graph[node]) {
-                path.push(nextNode);
-                dfsSearch(nextNode);
-                path.pop();
-            }
+var allPathsSourceTarget = function(graph){
+  var res = [];
+  var path = [];
+  path.push(0);
+  dfs(0);
+  function dfs(node){
+    if(node == graph.length -1){
+      res.push(path.slice(0));
+    } else {
+      for( nextNode of graph[node]){
+        path.push(nextNode);
+        dfs(nextNode);
+        path.pop();
+      }
     }
-    return res;
-};
+  }
+  return res;
+}
+var g = [[1,2],[3],[3],[]];
+//console.log(allPathsSourceTarget(g));
