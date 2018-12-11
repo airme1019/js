@@ -18,7 +18,8 @@ s: cookie size
    var j = 0;
    for(var i = 0; i<s.length&&i<g.length; i++){
      if(g[i]<=s[i]){  j++;
-       console.log("j: "+ j);} else { break;}
+       //console.log("j: "+ j);
+     } else { break;}
    }
    return i;
  }
@@ -37,4 +38,3 @@ s: cookie size
  var g = [1,2,3];
  var s = [1,3,3];
 var a = assignCookies(g,s);
- console.log(a);

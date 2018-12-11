@@ -11,7 +11,7 @@
  */
 var isBalanced = function(root) {
     let result = true;
-    funtion dfs(node, depth){
+    function dfs(node, depth){
       if (result === false) {
 				return;
 		    }
