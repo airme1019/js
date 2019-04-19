@@ -31,3 +31,28 @@ var add = (function () {
 add();
 add();
 // console.log(add());
+
+// make counter
+var makeCounter = function(){
+  var counter = 0;
+  function change(val){
+    counter += val;
+  }
+    return {
+      inc: function(){
+        change(1);
+      },
+      dec: function(){
+        change(-1);
+      },
+      value: function(){
+        return counter;
+      }
+    }
+};
+
+var c = makeCounter();
+c.inc();
+c.inc();
+c.dec();
+//console.log(c.value());

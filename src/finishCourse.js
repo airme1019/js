@@ -1,4 +1,4 @@
-// use strict
+// use strict test
 var canFinish = function(numCourses, prerequisites) {
     let nodeList = {};
 

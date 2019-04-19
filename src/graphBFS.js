@@ -26,4 +26,4 @@ var graphBFS = function(g){
   return bfs(0);
 }
 var g = [[1,2],[3],[3],[],[]];
-//console.log(graphBFS(g));
+console.log(graphBFS(g));

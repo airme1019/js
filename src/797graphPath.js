@@ -33,4 +33,4 @@ var allPathsSourceTarget = function(graph){
   return res;
 }
 var g = [[1,2],[3],[3],[]];
-//console.log(allPathsSourceTarget(g));
+console.log(allPathsSourceTarget(g));
