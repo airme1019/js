@@ -40,6 +40,8 @@ $js_files = dirToArray($dir);
   <a href="#" id="size-12">12</a>
   <a href="#" id="size-14">14</a>
   <a href="#" id="size-16">16</a>
+  <a href="#" id="size-20">20</a>
+
 </div>
 <div><a href="questions.html" target="_blank">111Some JS Questions</a></div>
 <div>
@@ -91,6 +93,7 @@ function makeSize(size) {
 document.getElementById('size-12').onclick = makeSize(12);
 document.getElementById('size-14').onclick = makeSize(14);
 document.getElementById('size-16').onclick = makeSize(16);
+document.getElementById('size-20').onclick = makeSize(20);
 
 </script>
 </body>
