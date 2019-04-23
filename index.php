@@ -61,6 +61,7 @@ $js_files = dirToArray($dir);
 <!--<script src="build/main.bundle.js"></script>-->
 <script src="src/closures.js"></script>
 <script>
+
 // calculated the sum of upVotes
 const posts = [
   {id: 1, upVotes: 2},
