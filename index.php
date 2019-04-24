@@ -47,18 +47,12 @@ $js_files = dirToArray($dir);
 <div>
   <ul>
     <?php foreach ($js_files as $key => $value) {
-      //echo "<li><a href=\"src/$value\" target=\"_blank\">$value</a></li>";
+      echo "<li><a href=\"src/$value\" target=\"_blank\">$value</a></li>";
     }?>
 
   </ul>
 </div>
 
-
-<?php foreach ($js_files as $key => $value) {
-  //echo "<script src=\"src/$value\"></script>";
-}?>
-<script src="src/reverseArrayWithoutAffectingSpecialChar.js"></script>
-<!--<script src="build/main.bundle.js"></script>-->
 <script src="src/closures.js"></script>
 <script>
 

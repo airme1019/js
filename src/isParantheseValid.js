@@ -16,4 +16,4 @@ var isValid = function(str){
     }
     return close.length >0 ? false : true
 };
-// console.log(isValid('{[()()]}'));
+ console.log(isValid('{}{}{[(())]}'));

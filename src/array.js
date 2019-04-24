@@ -6,25 +6,37 @@ The generated arrays should end with an element from B.
 */
 var alternateArray = function (a, b) {
   let result = []
-  for (let i = 0, j = 0; i < a.length && j < b.length; i += 1, j +=1) {
-    let r = []
-      while (a[i] > b[j]){
-        j ++
-      }
-      while (a[i] < b[j]) {
-        r.push(a[i])
-        r.push(b[j])
-        i++
-        if(b[j]>a[i]) i++
-        j++
-      }
 
-    if (r.length > 1) result.push(r)
-  }
-  return result
+  //for (let i = 0; i < a.length; i += 1) {
+    generateArray(a,b,0,0,true,result)
+  //}
 }
-
+/* Utility function*/
+var generateArray = function(a, b, aIndex, bIndex, fromA,result){
+  let arr = []
+  if (aIndex >= a.length || bIndex >= b.length) {
+       result.pop();
+       return;
+   }
+  if(fromA){
+    for (let i = aIndex; i < a.length; i++) {
+            if (a[i] > b[bIndex]) {
+                result.push(a[i]);
+                generateArray(a, b, i, bIndex + 1, false, result);
+            }
+        }
+  } else{
+    for (let j = bIndex; j < b.length; j++) {
+                if (a[aIndex] < b[j]) {
+                    result.push(b[j]);
+                    console.log(result)
+                    generateArray(a, b, aIndex + 1, j, true, result);
+                }
+            }
+  }
+  result.pop()
+}
 const A = [10, 15, 25]
 const B = [1, 5, 20, 30]
 const test = alternateArray(A,B)
-console.log(test)
+//console.log(test)
