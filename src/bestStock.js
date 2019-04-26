@@ -14,29 +14,13 @@ Input: [7,6,4,3,1]
 Output: 0
 Explanation: In this case, no transaction is done, i.e. max profit = 0.
 */
-var beststock = function (arr) {
-  let bestBuyTime = 0
-  let bestSellTime = 0
-  let earning = 0
-  let bestEarning = 0
-  let lost = 0
-  for (let i = 0; i < arr.length; i += 1) {
-    if(arr[i+1] > arr[i]){
-      console.log(arr[i+1] + ' > ' + arr[i])
-      earning = arr[i+1] - arr[i]
-      if(earning >=bestEarning){
-        bestEarning = earning
-        bestSellTime = i + 1
-      }
-    } else {
-      if (lost >= arr[i+1] - arr[i]){
-        lost = arr[i+1] - arr[i]
-        bestBuyTime = i + 1
-      }
-      console.log('lost ' + lost)
-      console.log('bestBuyTime ' + bestBuyTime)
-    }
+var beststock = function (prices) {
+  let minPrice = prices[0];
+  let maxProfit = 0
+  for (let i = 0; i < prices.length; i += 1){
+    minPrice = prices[i] < minPrice ? prices[i] : minPrice
+    maxProfit = prices[i] - minPrice > maxProfit ? prices[i] - minPrice : maxProfit
   }
-  return [ bestBuyTime, bestSellTime, bestEarning]
+  return maxProfit
 }
-console.log(beststock([1,5,2,6,4]))
+console.log(beststock([7,1,5,12,6,24]))
