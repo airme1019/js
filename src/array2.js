@@ -31,3 +31,11 @@ var findSmallest = function (arr) {
   return res
 }
 console.log(findSmallest([2,3]))
+
+var a1 = [1,2,5,6]
+var insertArr = function (arr, k, num) {
+  if (k==0) return [num].conact(...arr)
+  if (k >= arr.length) return arr.concat(num)
+  return arr.slice(0,k).concat([num]).concat(arr.slice(k))
+}
+console.log(insertArr(a1,1,3))
