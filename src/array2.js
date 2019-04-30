@@ -30,12 +30,14 @@ var findSmallest = function (arr) {
   }
   return res
 }
-console.log(findSmallest([2,3]))
+console.log(findSmallest([1,2,3,6,1,11]))
 
-var a1 = [1,2,5,6]
+
+/* Insert item in array */
+var a1 = [1,2,3,6,1,11]
 var insertArr = function (arr, k, num) {
   if (k==0) return [num].conact(...arr)
   if (k >= arr.length) return arr.concat(num)
   return arr.slice(0,k).concat([num]).concat(arr.slice(k))
 }
-console.log(insertArr(a1,1,3))
+//console.log(insertArr(a1,1,3))
