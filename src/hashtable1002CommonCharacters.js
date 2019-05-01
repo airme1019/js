@@ -4,7 +4,7 @@ Output: ["e","l","l"]
 */
 var commonChars = function(A) {
     let ans = A[0].split("");
-    console.log(ans)
+    //console.log(ans)
     for(let i=1; i< A.length; i++){
         ans = findCommon(ans, A[i].split(""));
         console.log(ans)
@@ -23,5 +23,5 @@ var findCommon = function(a,b){
      })
 
 }
-const A = ["abella","labea","arollera"]
+const A = ["abella","labea","baroler"]
 console.log(commonChars(A))
