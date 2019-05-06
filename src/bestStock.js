@@ -24,3 +24,13 @@ var beststock = function (prices) {
   return maxProfit
 }
 console.log(beststock([7,1,5,12,6,24]))
+
+const prices = [7,1,5,12,6,24]
+var maxProfit = function(prices) {
+  let profit = 0
+  for (let i = 0; i < prices.length; i += 1) {
+    if (prices[i+1] > prices[i]) profit += prices[i+1] - prices[i]
+  }
+  return profit
+};
+console.log(maxProfit(prices))
