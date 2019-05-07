@@ -18,22 +18,29 @@ var getIds = function(d) {
   },[])
 }
 
-var getIdsBFS = function(d) {
+var getIdsBFS = function(d,level) {
   let res = []
   let queue = []
-  //res.push([])
+  res[level] = []
   d.forEach(ele => {
-    res.push(ele['id'])
+    res[level].push(ele['id'])
 
      if(ele['items']){
-      queue.push(ele['items'])
+      queue.push(...ele['items'])
+      //level++
     }
+
   })
-  while(queue.length > 0){
+  console.log(queue)
+  res = res.concat(getIdsBFS(queue,level+1))
+/*  while(queue.length > 0){
     let subEle = queue.shift()
-     res = res.concat(getIdsBFS(subEle))
-  }
+    if(subEle['items']) level++
+     res = res.concat(getIdsBFS(subEle,level))
+     console.log('level: '+level)
+  }*/
+
   return res
 }
 
-console.log(getIdsBFS(data))
+console.log(getIdsBFS(data,0))
