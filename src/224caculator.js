@@ -14,7 +14,7 @@ var calculate = function(s) {
                 i++;
             }
         n = parseInt(num)
-console.log('n '+n)
+//console.log('n '+n)
       } else if(c == '+'){
         res += sign * n;
             n = 0;
@@ -23,7 +23,7 @@ console.log('n '+n)
         res += sign*n
         sign = -1
         n = 0
-         console.log('res '+res)
+         //console.log('res '+res)
       } else if( c == '('){
         stack.push(res)
         stack.push(sign)
@@ -39,8 +39,8 @@ console.log('n '+n)
        }
 
     }
-    console.log('res '+res)
-    console.log(n)
+    //console.log('res '+res)
+    //console.log(n)
     if(n != 0) {res += sign * n}
     return res
 };
