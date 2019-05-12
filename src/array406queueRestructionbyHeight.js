@@ -1,8 +1,10 @@
 var reconstructQueue = function(people) {
   people.sort(sortP)
+  console.log(people)
   let res = []
   for (let i = 0; i < people.length; i += 1) {
     res.splice(people[i][1], 0 , people[i])
+    console.log(res)
   }
   return res
 };
