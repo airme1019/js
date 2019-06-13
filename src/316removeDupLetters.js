@@ -57,3 +57,9 @@ var removeDuplicateLetters1 = function(s) {
   return res
 }
 console.log(removeDuplicateLetters1('cbacdcbc'))
+
+var removeDuplicateLetters3 = function(string){
+  let res = new Set(string)
+  return res
+}
+console.log(removeDuplicateLetters3('cbacdcbc'))
