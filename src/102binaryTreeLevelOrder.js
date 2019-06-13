@@ -9,18 +9,25 @@
  * @param {TreeNode} root
  * @return {number[][]}
  */
-var levelOrder = function(root) {
-    if(!root) return [];
-    var res = [];
-    search(root,1);
-    function serach(node,level){
-      if(node){
-        if(res.length<level){
-          res.push([]);
-        }
-        res[res.length-1].push(node.val);
-        search(node.left,level+1);
-        search(node.right,level+1);
-      } else return;
-    }
-};
+ var levelOrder = function(root) {
+   if (!root) return [];
+   var array = [];
+   search(root, 0);
+
+   function search(root, level) {
+     if (root) {
+       if (array.length <= level) {
+         array.push([]);
+       }
+
+     array[level].push(root.val);
+
+       search(root.left, level + 1);
+       search(root.right, level + 1);
+     } else {
+       return;
+     }
+   }
+
+   return array;
+ };
