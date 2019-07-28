@@ -2,7 +2,7 @@
 function test(a){
   var a = 6;;
  return function b(){
-  // console.log(a);
+   console.log(a);
   }
 
 }
