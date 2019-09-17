@@ -6,4 +6,19 @@ var getCode = (function() {
   };
 })();
 
-console.log(getCode());    // Returns the apiCode
+//console.log(getCode());    // Returns the apiCode
+
+var test = function() {
+  // 225000 // 0 1 2
+  let t = 1
+  while (t<11000){
+    let r = 225 * t +''
+    if([...r].every(c => '012'.includes(c))) {
+      console.log(225*t)
+     break
+    }
+    t++
+  }
+}
+//console.log(digits_only('012'))
+console.log(test())
