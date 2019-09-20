@@ -21,4 +21,6 @@ var test = function() {
   }
 }
 //console.log(digits_only('012'))
-console.log(test())
+//console.log(test())
+  const r = new Set([1,1,2,2,3])
+  console.log([...r].length)
