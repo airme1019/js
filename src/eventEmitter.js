@@ -1,5 +1,7 @@
 class EventEmitter {
-  listeners = {}
+  constructor(){
+    this.listeners = {};
+  }
 
   addListener(eventName, fn) {
     this.listeners[eventName] = this.listeners[eventName] || [];
@@ -131,16 +133,16 @@ const withTime = new WithTime();
 withTime.on('begin', () => console.log('About to execute'));
 withTime.on('end', () => console.log('Done with execute'));
 
-const readFile = (url, cb) => {
+/*const readFile = (url, cb) => {
   fetch(url)
-    .then((resp) => resp.json()) // Transform the data into json
+    .then((resp) => resp.json())
     .then(function(data) {
       cb(null, data);
     });
 }
 
 withTime.execute(readFile, 'https://jsonplaceholder.typicode.com/posts/1');
-
+*/
 
 myEmitter.off('eventOne', c1);
 myEmitter.off('eventOne', c2);
