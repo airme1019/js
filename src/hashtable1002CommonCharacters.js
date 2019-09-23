@@ -7,7 +7,7 @@ var commonChars = function(A) {
     //console.log(ans)
     for(let i=1; i< A.length; i++){
         ans = findCommon(ans, A[i].split(""));
-        console.log(ans)
+        //console.log(ans)
     }
     return ans;
 };
