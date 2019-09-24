@@ -19,12 +19,3 @@ var isPalindrome = function(head) {
     }
     return true
 };
-
-const a = [1,2,3,1,2,3]
-let i = 0
-let res = true
-while (i < a.length) {
-  if ( a[i] !== a[a.length - 1 - i]){res =false}
-    i++
-}
-console.log(res)

@@ -33,8 +33,7 @@ var helper = function(res) {
   let r = ''
   let j = 0
   while( j < res.length) {
-    /*1*/
-    let count = 0
+     let count = 0
     let c = res.charAt(j)
     while(res.charAt(j) == c) {
       count++
