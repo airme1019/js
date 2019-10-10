@@ -122,6 +122,26 @@ class LinkedList {
         }
     }
 
+    search(value) {
+            let current = this.head;
+            while (current) {
+                if (current.value === value) return value;
+                current = current.prev;
+            }
+            return null;
+        }
+
+    indexOf(value) {
+        const indexes = [];
+        let current = this.tail;
+        let index = 0;
+        while (current) {
+            if (current.value === value) indexes.push(index);
+            current = current.next;
+            index++;
+        }
+        return indexes;
+    }
     *[Symbol.iterator]() {
         let node = this.head;
         while (node) {
@@ -129,6 +149,8 @@ class LinkedList {
             node = node.next;
         }
     }
+
+
 }
 
 const chain = new LinkedList();
