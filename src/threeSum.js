@@ -45,15 +45,22 @@ Count triplets with sum smaller than a given value
 var tripletsLessThan = function (arr1, sum) {
   let result = []
   let arr = arr1.sort((a,b) => a-b)
-  for (let i = 0; i < arr.length - 2; i += 1){
+  for (let i = 0; i <= arr.length - 2; i += 1){
     let j = i + 1
     let k = arr.length - 1
     while(j < k){
-      if (arr[i] + arr[j] + arr[k] > sum) {
+      console.log(' k '+k)
+      if (arr[j] + arr[k] > sum -arr[i]) {
         k --
       } else {
         result.push([arr[i], arr[j], arr[k]])
-        j ++
+         j ++
+
+      }
+      if(j == k -1 && arr[j] + arr[k] > sum -arr[i]) {
+        result.push([arr[i], arr[j], arr[k]])
+        j = i + 1
+        k--
       }
     }
   }
