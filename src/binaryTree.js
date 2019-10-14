@@ -75,7 +75,7 @@ var treeWidths = function (tree) {
   return res;
 }
 //console.log(numbers)
-console.log(treeWidths(tree).length)
+console.log(treeWidths(tree))
 
 const numbers2 = [];
 tree.traverseDF(node => numbers2.push(node.data));
