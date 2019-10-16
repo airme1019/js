@@ -26,7 +26,6 @@ class Tree {
             const node = queue.shift();
             queue.push(...node.children);
             fn(node);
-          //  console.log(node)
         }
     }
 
@@ -44,8 +43,11 @@ const tree = new Tree();
 tree.root = new Node(1);
 tree.root.add(2);
 tree.root.add(3);
+
 tree.root.children[0].add(4);
 tree.root.children[1].add(5);
+//console.log(tree.root.children)
+
 
 const numbers = [];
 const widths = [1];
@@ -54,18 +56,23 @@ tree.traverseBF(node => {
 });
 
 var treeWidths = function (tree) {
-  if (tree.root == null) return [0]
-  var res = []
-
-  function helper (node, level) {
-    while(node.children.length){
-    helper(node.children[0], 0)
-    helper(node.children[0], 0)
-    node =
+  if(!tree.root) return [];
+  var res = [];
+  search(tree.root,1);
+  function search(node,level) {
+    if(node){
+      if(res.length<level){
+          res.push([]);
+      }
+      res[level-1].push(node.data);
+      //console.log(' node ' + node.data + ' level '+ level)
+      //console.log(res)
+      search(node.children[0],level+1);
+      search(node.children[1],level+1);
+    } else {return;}
   }
-  }
-   helper(tree.root, 0)
-
+  console.log(tree)
+  return res;
 }
 //console.log(numbers)
 console.log(treeWidths(tree))
