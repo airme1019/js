@@ -19,6 +19,6 @@ Output: [0,0,1,1,2,2]*/
 const nums = [2,0,2,1,1,0]
 console.log(sortColors(nums))
 
-var list = {"you": 100, "me": 75, "foo": 116, "bar": 15};
+/*var list = {"you": 100, "me": 75, "foo": 116, "bar": 15};
 keysSorted = Object.keys(list).sort(function(a,b){return list[a]-list[b]})
-console.log(keysSorted); 
+console.log(keysSorted); */

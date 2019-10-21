@@ -27,3 +27,6 @@ var removeDuplicates = function(nums) {
 };
 
 console.log(removeDuplicates([1,2,3,3,4,5,5,6,6,7,7,]));
+const i = [1,2,3,3,4,5,5,6,6,7,7,]
+const res = new Set(i)
+console.log(res)
