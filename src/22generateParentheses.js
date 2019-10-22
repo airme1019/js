@@ -25,13 +25,13 @@ var backTrack = function(res, current, open, close, n) {
 /* DFS */
 var generateParenthesis2 = function(n) {
     let res = []
-    dfs(res,3,3,'')
+    dfs(res,n,n,'')
     return res
 };
 var dfs = function (res, left, right,string) {
   if(left>right) return
-  console.log('left: '+ left +' right: '+right)
-  console.log(string)
+  //console.log('left: '+ left +' right: '+right)
+  //console.log(string)
   if(left == 0 && right == 0){
     res.push(string)
     return
@@ -43,4 +43,4 @@ var dfs = function (res, left, right,string) {
     dfs(res,left,right-1,string+')')
   }
 }
-console.log(generateParenthesis2(3))
+console.log(generateParenthesis2(4))
