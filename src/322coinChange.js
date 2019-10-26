@@ -41,5 +41,16 @@ var coinChange = function(coins, amount) {
     return countArray[amount] <= amount ? countArray[amount] : -1;
 };
 
+var coinChange2 = function(coins, amount) {
+    coins = coins.sort((a,b ) => a-b);
+
+    for(let c=0; c<=amount; c++){
+
+        for(let i=0; i<coins.length; i++){
+
+        }
+    }
+    return 1
+};
 const coins = [186,419,83,408], amount = 6249
 console.log(coinChange(coins,amount))
