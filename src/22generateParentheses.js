@@ -20,7 +20,7 @@ var backTrack = function(res, current, open, close, n) {
   }
 }
 
-//console.log(generateParenthesis(3))
+console.log(generateParenthesis(4))
 
 /* DFS */
 var generateParenthesis2 = function(n) {
@@ -36,11 +36,11 @@ var dfs = function (res, left, right,string) {
     res.push(string)
     return
   }
-  if(left){
+  if(left>0){
     dfs(res,left-1,right,string+'(')
   }
-  if(right){
+  if(right>0){
     dfs(res,left,right-1,string+')')
   }
 }
-console.log(generateParenthesis2(4))
+//console.log(generateParenthesis2(3))
