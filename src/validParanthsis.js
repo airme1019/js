@@ -16,4 +16,26 @@ var isValid = function(str){
     }
     return close.length >0 ? false : true
 };
- console.log(isValid('{}{}{[(())]}'));
+
+var isValid2 = function(s) {
+    const map = {
+        '}' : '{',
+        ')' : '(',
+        ']' : '['
+    };
+
+    const result = [];
+
+    for (let item of s) {
+        if (item === '{' || item === '[' || item === '(') {
+            result.push(item);
+        } else if (map[item]) {
+            if (result.pop() !== map[item]) {
+                return false;
+            }
+        }
+    }
+
+    return result.length === 0;
+};
+ console.log(isValid2('{}{}{[(())]}'));
