@@ -15,3 +15,8 @@ var findClosestElements = function(arr, k, x) {
   }
   return arr.slice(left, left + k);
 };
+
+var test = (str, pattern) => {
+  return str.split(pattern)
+}
+console.log(test("ababab", "ab"))
