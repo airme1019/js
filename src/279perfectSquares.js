@@ -10,3 +10,8 @@ function numSquares(n) {
 
   return dp[n];
 }
+console.log("numSquares", numSquares(10))
+
+/* Using dynamic programming
+https://leetcode.com/problems/perfect-squares/
+*/
